@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Formulário</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+     <script type="text/javascript" src="formulario.js"></script>
+     <script type="text/javascript" src="select.js"></script>
+     <script type="text/javascript" src="modal.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>
+  
+   <style type="text/css">
+   label{
+    display: inline-block;
+    width: 250px;
+    margin-left: 27%;
+    text-align: right;}
+   #botao
+   {margin-left: 48%;}
+  </style>
+ </head>
+
+ <body>
+
+  <!-- Modal -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Formulário preenchido com sucesso! :)</h4>
+      <p>Seus dados foram salvos, fique tranquilo.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok, obrigado.</a>
+    </div>
+  </div>
+  
+  <h2 align="center">. : Formulário : .</h2>
+  
+  <div id="a">
+    <form class="col s12">
+      
+    <div class="row">
+    <label for="email">Endereço de e-mail:</label>
+      <div class="input-field inline">
+      <input id="email" type="email" class="validate" name="email" v-model="email">
+      </div>
+    </div>
+
+    <div class="row">
+    <label for="nome">Nome:</label>
+      <div class="input-field inline">
+      <input id="nome" type="text" class="validate" name="nome" v-model="nome">
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="sexo">Sexo:</label>
+        <div class="input-field inline">
+        <select name="sexo" id="sexo" v-model="sexo" class="browser-default">
+          <option value="" disabled selected></option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+        </select>
+      </div>
+    </div>
+   
+    <div class="row">
+      <label for="curso">Curso:</label>
+      <div class="input-field inline">
+        <select name="curso" id="curso" v-model="curso" class="browser-default">
+          <option value="" disabled selected></option>
+          <option value="Técnico em informática">Técnico em informática</option>
+          <option value="Técnico em alimentos">Técnico em alimentos</option>
+          <option value="Técnico em Agropecuária">Técnico em agropecuária</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+    <label for="">Endereço:</label>
+      <div class="input-field inline">
+      <input id="endereco" type="text" class="validate" name="endereco" v-model="endereco">
+      </div>
+    </div>
+
+    <div class="row">
+    <label for="">Complemento:</label>
+      <div class="input-field inline">
+      <input id="complemento" type="text" class="validate" name="complemento" v-model="complemento">
+      </div>
+    </div>
+
+    <div class="row">
+    <label for="">CEP:</label>
+      <div class="input-field inline">
+      <input id="cep" type="text" class="validate" name="cep" v-model="cep">
+      </div>
+    </div>
+
+    <div class="row">
+    <label for="Município">Município:</label>
+      <div class="input-field inline">
+          <select name="uf" id="uf" v-model="uf" class="browser-default">
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AM">AM</option>
+            <option value="AP">AP</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MG">MG</option>
+            <option value="MS">MS</option>
+            <option value="MT">MT</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="PR">PR</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS" selected>RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SE">SE</option>
+            <option value="SP">SP</option>
+            <option value="TO">TO</option>
+          </select>
+      </div>
+    </div>
+    <div>
+      <a id="botao" @click="salvar" class="waves-effect waves-light btn" href="#modal1"> Salvar </a>
+    </div> 
+
+  </form>
+</div>
+
+ <script type="text/javascript" src="vuejs_primeiro_form.js"></script>     
+ </body>
+</html>
