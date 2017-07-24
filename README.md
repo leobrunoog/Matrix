@@ -1,2 +1,2 @@
 # Matrix
-Exercício do projeto matrix.
+Exercícios do projeto matrix.
